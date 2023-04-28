@@ -1,22 +1,25 @@
 import "./style.css"
 
-const Buttons = (props) => (
-    props.tasks.length > 0 && (
-        <div className="container__buttons">
-            <button
-                className="containerButtons__button">
-                {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
-            </button>
-            <button
-                className="containerButtons__button"
-                disabled={props.tasks.every(({ done }) => done)}
+const Buttons = ({ tasks, hideDone, toggleHideDone }) => 
+        tasks.length > 0 && (
+            <div className="container__buttons">
+                <>
+                    <button onClick={toggleHideDone}
+                        className="containerButtons__button">
+                        {hideDone ? "Pokaż" : "Ukryj"} ukończone
+                    </button>
+                    <button
+                        className="containerButtons__button"
+                        disabled={tasks.every(({ done }) => done)}
 
-            >
-                Ukończ wszystkie
-            </button>
-        </div >
-    )
-);
+                    >
+                        Ukończ wszystkie
+                    </button>
+
+                </>
+            </div >
+
+        );
 
 
-export default Buttons;
+        export default Buttons;
