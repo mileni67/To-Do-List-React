@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -10,11 +10,11 @@ function App() {
 
   const [hideDone, setHideDone] = useState(false);
   const [tasks, setTasks] = useState(
-    [
-      { id: 1, content: "przejsc na Reacta", done: false },
-      { id: 2, content: "zjesc obiad", done: true },
-    ]
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
+  useEffect (() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+  }, [tasks]);
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
