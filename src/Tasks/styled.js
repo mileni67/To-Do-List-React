@@ -12,7 +12,7 @@ export const Item = styled.li`
     text-decoration: none;
     grid-gap: 10px;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
 
     ${({ hidden }) => hidden && css`
@@ -48,8 +48,8 @@ export const Button = styled.button`
     `}
 
     ${({ remove }) => remove && css`
-            background-color: #FF405B;
-            color: white;
+            background-color: ${({ theme }) => theme.color.red};
+            color: ${({ theme }) => theme.color.white};
             border: none;
             width: 30px;
             height: 30px;
@@ -57,7 +57,7 @@ export const Button = styled.button`
             cursor: pointer;
             transition: 1s;
         &:hover {
-            background-color: hsl(352, 100%, 35%);
+            filter: brightness(110%);
         }
     `}
 `;

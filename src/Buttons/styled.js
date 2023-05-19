@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ButtonList = styled.div`
     padding-right: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 10px;
@@ -16,7 +16,7 @@ export const ButtonList = styled.div`
 export const StyledButton = styled.button`
     border: none;
     background-color: white;
-    color: teal;
+    color: ${({ theme }) => theme.color.teal};
     transition: color 0.5s;
 
     &:hover {
@@ -26,7 +26,7 @@ export const StyledButton = styled.button`
     }
 
     &:disabled {
-    color: #ccc;
+    color: ${({ theme }) => theme.color.silver};
     cursor: auto;
     }
 `;
