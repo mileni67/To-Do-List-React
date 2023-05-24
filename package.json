@@ -1,8 +1,8 @@
 {
-  "name": "my-app-remember",
+  "name": "To-Do-List-React",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://mileni67.github.io/remember-react/",
+  "homepage": "https://mileni67.github.io/To-Do-List-React/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
