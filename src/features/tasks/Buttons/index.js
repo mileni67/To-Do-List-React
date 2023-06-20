@@ -1,6 +1,13 @@
-import { selectAreTasksEmpty, selectHideDone, selectIsEveryTaskDone, setAllDone, toggleHideDone } from "../tasksSlice";
-import { ButtonList, StyledButton } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
+import { ButtonList, StyledButton } from "./styled";
+import {
+    selectAreTasksEmpty,
+    selectHideDone,
+    selectIsEveryTaskDone,
+    setAllDone,
+    toggleHideDone,
+    fetchExampleTasks
+} from "../tasksSlice";
 
 const Buttons = () => {
     const areTasksEmpty = useSelector(selectAreTasksEmpty);
@@ -10,25 +17,33 @@ const Buttons = () => {
     const dispatch = useDispatch();
 
     return (
-        !areTasksEmpty && (
-            <ButtonList>
-                <>
-                    <StyledButton onClick={() => dispatch(toggleHideDone())}
-                    >
-                        {hideDone ? "Pokaż" : "Ukryj"} ukończone
-                    </StyledButton>
-                    <StyledButton
-                        onClick={() => dispatch(setAllDone())}
-                        disabled={isEveryTaskDone}
-                    >
-                        Ukończ wszystkie
-                    </StyledButton>
+        <ButtonList>
+            <StyledButton onClick={() => dispatch(fetchExampleTasks())}>
+                Pobierz przykladowe zadanie
+            </StyledButton>
+            {
+                !areTasksEmpty && (
 
-                </>
-            </ButtonList >
+                    <>
+                        <StyledButton onClick={() => dispatch(toggleHideDone())}
+                        >
+                            {hideDone ? "Pokaż" : "Ukryj"} ukończone
+                        </StyledButton>
+                        <StyledButton
+                            onClick={() => dispatch(setAllDone())}
+                            disabled={isEveryTaskDone}
+                        >
+                            Ukończ wszystkie
+                        </StyledButton>
 
-        ))
-};
+                    </>
+                )
+            }
+        </ButtonList >
+
+    );
+}
+
 
 
 export default Buttons;
