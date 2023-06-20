@@ -17,6 +17,7 @@ This app will help you remember the most important things to do.
 - JavaSctipt
 - Git
 - React
+- Redux
 
 # Getting Started with Create React App
 
