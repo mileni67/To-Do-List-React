@@ -1,7 +1,9 @@
 import React from "react";
-import { BrowserRouter, Link, Switch, Route} from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/author/Author";
+import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
+import AuthorPage from "./features/author/AuthorPage";
+import TaskPage from "./features/tasks/TaskPage";
+import TasksPage from "./features/tasks/TasksPage";
+
 
 
 export const App = () => (
@@ -9,7 +11,7 @@ export const App = () => (
         <nav>
             <ul>
                 <li>
-                    <Link to="/zadania">
+                    <Link to="/zadania:id">
                         Tasks
                     </Link>
                 </li>
@@ -20,11 +22,17 @@ export const App = () => (
                 </li>
             </ul>
             <Switch>
+            <Route path="/zadania/:id">
+                    <TaskPage />
+                </Route>
                 <Route path="/zadania">
-                    <Tasks />
+                    <TasksPage />
                 </Route>
                 <Route path="/author">
-                    <Author />
+                    <AuthorPage />
+                </Route>
+                <Route path="/">
+                    <Redirect to="/zadania"/>
                 </Route>
             </Switch>
         </nav>
