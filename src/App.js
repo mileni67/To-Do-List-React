@@ -3,14 +3,14 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
-import { StyledNavLink } from "./styled";
+import { List, StyledNavLink } from "./styled";
 
 
 
 export const App = () => (
     <BrowserRouter>
         <nav>
-            <ul>
+            <List>
                 <li>
                     <StyledNavLink to="/zadania:id">
                         Tasks
@@ -21,7 +21,7 @@ export const App = () => (
                         About author
                     </StyledNavLink>
                 </li>
-            </ul>
+            </List>
             <Switch>
             <Route path="/zadania/:id">
                     <TaskPage />
