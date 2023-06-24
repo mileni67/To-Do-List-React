@@ -25,7 +25,7 @@ export default () => {
     return (
         <Wrapper>
             <Input
-                placeholder="Filtruj"
+                placeholder="Filter tasks"
                 value={query || ""}
                 onChange={onInputChange}
             />
