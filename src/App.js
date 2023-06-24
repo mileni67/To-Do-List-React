@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Link, Switch, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
+import { StyledNavLink } from "./styled";
 
 
 
@@ -11,14 +12,14 @@ export const App = () => (
         <nav>
             <ul>
                 <li>
-                    <Link to="/zadania:id">
+                    <StyledNavLink to="/zadania:id">
                         Tasks
-                    </Link>
+                    </StyledNavLink>
                 </li>
                 <li>
-                    <Link to="/author">
+                    <StyledNavLink to="/author">
                         About author
-                    </Link>
+                    </StyledNavLink>
                 </li>
             </ul>
             <Switch>
