@@ -12,7 +12,7 @@ export const App = () => (
         <nav>
             <List>
                 <li>
-                    <StyledNavLink to="/zadania:id">
+                    <StyledNavLink to="/zadania">
                         Tasks
                     </StyledNavLink>
                 </li>

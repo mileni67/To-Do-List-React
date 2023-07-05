@@ -10,10 +10,10 @@ function TaskPage() {
 
     return (
         <>
-            <Header title="Szczegóły zadania" />
+            <Header title="Task details" />
             <Section
                 title={task ? task.content : "Nie znaleziono zadania"}
-                body={<><strong>Ukończono:</strong> {task.done ? "Tak" : "Nie"}</>}
+                body={<><strong>Done:</strong> {task.done ? "YES" : "NO"}</>}
             />
         </>
     );
