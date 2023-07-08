@@ -1,5 +1,6 @@
 # Todo-List-React
-![tasks](https://user-images.githubusercontent.com/25402008/212052701-bbcc41e7-9170-4cc9-8ca9-3fc045277c27.gif)
+![tasks](https://github.com/mileni67/To-Do-List-React/assets/25402008/497489ef-a869-4595-80e2-22f7db80f107)
+
 
 ## Demo
 https://mileni67.github.io/To-Do-List-React/
@@ -9,6 +10,8 @@ This app will help you remember the most important things to do.
 
 ## Updates
 - 2 buttons (1- all done. 2- hide finished, show finished)
+- 1 input (Search)
+- 1 button (added example task)
 
 
 ## Used Technologies
