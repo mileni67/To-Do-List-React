@@ -1,24 +1,18 @@
-import { useLocation } from "react-router-dom";
 import Input from "../../Input";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { Wrapper } from "./styled";
 import searchQueryParamName from "../../TasksPage/searchQueryParamName";
+import { useQueryParameter, useReplaceQueryParametr } from "../../TasksPage/queryParameters";
 
 export default () => {
-    const location = useLocation();
-    const history = useHistory();
-    const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
+    const query = useQueryParameter(searchQueryParamName);
+    const replaceQueryParametr = useReplaceQueryParametr();
 
     const onInputChange = ({ target }) => {
-        const searchParams = new URLSearchParams(location.search);
+        replaceQueryParametr ({
+            key: searchQueryParamName,
+            value: target.value.trim() !== "" ? target.value : undefined,
 
-        if (target.value.trim() === "") {
-            searchParams.delete(searchQueryParamName);
-        } else {
-            searchParams.set(searchQueryParamName, target.value);
-        }
-
-        history.push(`${location.pathname}?${searchParams.toString()}`);
+        }); 
     };
 
 

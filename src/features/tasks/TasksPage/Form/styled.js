@@ -9,14 +9,6 @@ export const StyledForm = styled.form`
     }
 `;
 
-export const Input = styled.input`
-    flex-basis: 100px;
-    flex-grow: 1;
-    overflow: hidden;
-    padding: 7px;
-    border: 1px solid ${({ theme }) => theme.color.alto};
-`;
-
 export const Button = styled.button`
     padding: 7px;
     background-color: rgb(57, 149, 149);
