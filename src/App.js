@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, Redirect } from "react-router-dom";
 import AuthorPage from "./features/author/AuthorPage";
 import TaskPage from "./features/tasks/TaskPage";
 import TasksPage from "./features/tasks/TasksPage";
@@ -8,7 +8,7 @@ import { List, StyledNavLink } from "./styled";
 
 
 export const App = () => (
-    <BrowserRouter>
+    <HashRouter>
         <nav>
             <List>
                 <li>
@@ -37,5 +37,5 @@ export const App = () => (
                 </Route>
             </Switch>
         </nav>
-    </BrowserRouter>
+    </HashRouter>
 );
