@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 
-export const List = styled.ul`
+export const List = styled.ul`  
     list-style: none;
     padding: 10px;
     margin: 10px;
@@ -62,3 +63,8 @@ export const Button = styled.button`
         }
     `}
 `;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: teal;
+`

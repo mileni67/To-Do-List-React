@@ -1,19 +1,27 @@
 import { useDispatch, useSelector } from "react-redux"
-import { fetchExampleTasks, selectExampleTasksLoading } from "../../tasksSlice"
+import { fetchExampleTasks, setLoading } from "../../tasksSlice"
 import { StyledButton, Button } from "./styled";
 
 const ExampleTasksButton = () => {
 
     const dispatch = useDispatch();
-    const loading = useSelector(selectExampleTasksLoading);
+    const isLoading = useSelector((state) => state.tasks.isLoading);
+
+    const exampleClick = () => {
+        dispatch(setLoading(false));
+        setTimeout(() => {
+            dispatch(fetchExampleTasks());
+            dispatch(setLoading(true));
+        }, 1000)
+    }
 
     return (
         <StyledButton>
             <Button
-                onClick={() => dispatch(fetchExampleTasks())}
-                disabled={loading}
+                onClick={exampleClick}
+                disabled={isLoading}
             >
-                {loading
+                {isLoading
                     ? "Loading..."
                     : "Add example task"}
             </Button>
