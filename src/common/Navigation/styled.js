@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-const activeClassName = "active";
-
 export const List = styled.ul`
     background-color: teal;
     display: grid;
@@ -15,14 +13,18 @@ export const List = styled.ul`
     font-size: 15px;
 `;
 
-export const StyledNavLink = styled(NavLink).attrs(() => ({
-    activeClassName,
-}))`
-    &.${activeClassName}{
-        color: rgb(204, 204, 204);
-    }
-    text-decoration: none;
+export const StyledNavLink = styled(NavLink)`
     color: white;
+    text-decoration: none;
+    
+    &.active{
+        font-weight: bold;
+    }
+
+    &:hover{
+        text-shadow: 0px 0px white;
+    }
+   
 `;
 
 export const Item = styled.li`

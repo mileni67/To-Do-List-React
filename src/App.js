@@ -6,7 +6,6 @@ import TasksPage from "./features/tasks/TasksPage";
 import { Navigation } from "./common/Navigation";
 
 
-
 export const App = () => (
     <HashRouter>
         <Navigation />
