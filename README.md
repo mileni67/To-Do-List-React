@@ -12,6 +12,7 @@ This app will help you remember the most important things to do.
 - 2 buttons (1- all done. 2- hide finished, show finished)
 - 1 input (Search)
 - 1 button (added example task)
+- Added a subpage "About the author"
 
 
 ## Used Technologies
