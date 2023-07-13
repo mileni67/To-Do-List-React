@@ -13,7 +13,7 @@ export const App = () => (
             <Route path="/zadania/:id">
                 <TaskPage />
             </Route>
-            <Route path="/autor">
+            <Route path="/author">
                 <AuthorPage />
             </Route>
             <Route path="/">
