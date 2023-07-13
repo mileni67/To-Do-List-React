@@ -1,7 +1,8 @@
 import React from "react";
 import Container from "../../common/Container";
 import Header from "../../common/Header";
-import Section from "../../common/Section";
+import Section from "../../common/Section"
+import { Stylediv } from "./styled";
 
 
 export default () => (
@@ -10,7 +11,8 @@ export default () => (
         <Section
             title="Oleksandr Vykhor"
             body={
-                <> <p>My name is Oleksandr. I am an ambitious person with a strong
+                <Stylediv>
+                    My name is Oleksandr. I am an ambitious person with a strong
                     passion for personal and professional
                     development. I like work in a team and
                     very eager to help others. Currently
@@ -19,8 +21,7 @@ export default () => (
                     technical skills. I'm open to new
                     technologies and the near future want
                     working to Frontend.
-                </p>
-                </>
+                </Stylediv>
             }
         />
     </Container>
