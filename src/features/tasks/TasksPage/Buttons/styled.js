@@ -22,7 +22,6 @@ export const StyledButton = styled.button`
     &:hover {
     color: hsl(180, 60%, 20%);
     cursor: pointer;
-    transform: scale(1.1);
     }
 
     &:disabled {

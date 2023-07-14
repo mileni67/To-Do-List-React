@@ -11,11 +11,14 @@ export const List = styled.ul`
     padding: 10px;
     text-decoration: none;
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
 `;
 
 export const StyledNavLink = styled(NavLink)`
     color: white;
     text-decoration: none;
+    text-align: center;
     
     &.active{
         font-weight: bold;
